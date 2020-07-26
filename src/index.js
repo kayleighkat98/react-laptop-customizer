@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './App/App';
 
-const FEATURES = {
+const FEATURES = {//WHY ISNT THIS STATE???
   Processor: [
     {
       name: '17th Generation Intel Core HB (7 Core with donut spare)',
@@ -45,5 +45,5 @@ const FEATURES = {
     },
   ]
 };
-
+// features={FEATURES}
 ReactDOM.render(<App features={FEATURES}/>, document.getElementById('root'));
