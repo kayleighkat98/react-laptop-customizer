@@ -202,7 +202,7 @@ class App extends Component {
                 options = {this.props.features[feature].map(item => 
                   itemHash = slugify(JSON.stringify(item)))}
                     name={slugify(feature)}
-                updateFeature= {this.updateFeature}
+                updateFeature= {this.updateFeature(this.state.options.feature,this.state.options.item)}
               />
             ))}
                        

@@ -17,13 +17,12 @@ class Features extends Component {
 
                     <FeatureList
                         feature = {this.props.feature}
-                        updateFeature= {this.props.updateFeature}
                         type="radio"
                         id={this.props.options.itemHash}
                         className="feature__option"
                         name={this.props.options.name}
-                        checked={this.props.options.name === this.props.selected[this.props.feature].name}
-                        onChange={e => this.updateFeature(this.props.options.feature, this.props.options.item)}
+                        checked={this.props.options.name === this.state.selected[this.state.feature].name}
+                        onChange={e => this.props.updateFeature}
                     />
                 
 

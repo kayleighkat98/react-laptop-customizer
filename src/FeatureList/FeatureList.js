@@ -17,13 +17,13 @@ class FeatureList extends Component {
             <FeatureItem 
               features={this.props.features}
               feature = {this.props.feature}
-              updateFeature= {this.props.updateFeature}
               type={this.props.type}
               id={this.props.id}
               className={this.props.className}
               name={this.props.name}
               checked={this.props.checked}
               onChange={this.props.onChange}
+              
             />
           </form>
         </div>
