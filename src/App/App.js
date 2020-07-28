@@ -45,7 +45,7 @@
 //   };
 
   // render() {
-  //   const features = Object.keys(this.props.features).map((feature, idx) => {
+//   const features = Object.keys(this.props.features).map((feature, idx) => {
 
   //     const featureHash = feature + '-' + idx;
   //     const options = this.props.features[feature].map(item => {
@@ -170,15 +170,14 @@ class App extends Component {
       
     };
   }
-  // updateFeature = (feature, newValue) => {
-  //   const selected = Object.assign({}, this.state.selected);
-  //   selected[feature] = newValue;
-  //   this.setState({
-  //     selected
-  //   });
-  // };
+  updateFeature = (feature, newValue) => {
+    const selected = Object.assign({}, this.state.selected);
+    selected[feature] = newValue;
+    this.setState({
+      selected
+    });
+  };
   render() {
-
     // const USCurrencyFormat = new Intl.NumberFormat("en-US", {
     //   style: "currency",
     //   currency: "USD",
@@ -192,15 +191,11 @@ class App extends Component {
 
         <main>
           <form className="main__form">
-              <Features
-                // updateFeature= {this.updateFeature}
-                selected = {this.state.selected}
-                features = {this.props.features}
-                // updateFeature= {this.updateFeature(this.state.options.feature,this.state.options.item)}
-              />
-            
-                       
-            
+            <Features
+              selected = {this.state.selected}
+              features = {this.props.features}
+              updateFeature= {this.updateFeature}
+            />
           </form>
           <div className="summary__total">
             <Total/>
