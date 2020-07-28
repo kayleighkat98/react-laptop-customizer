@@ -5,8 +5,7 @@ import slugify from "slugify";
 
 class FeatureList extends Component {
   render() {
-
-
+    // console.log(this.props.feature)
 
   
     // const featureHash = feature + '-' + idx;
@@ -16,7 +15,9 @@ class FeatureList extends Component {
       <div className="Container">
         <div className="FeatureList_body">
           <FeatureItem 
-
+            features={this.props.features}
+            feature={this.props.feature}
+            costs= {this.props.options.map((item)=>(item.cost))}
             names= {this.props.options.map((item)=>(item.name))}
           />
         </div>

@@ -32,7 +32,7 @@ import FeatureList from "../FeatureList/FeatureList";
 class Features extends Component {
 
     render() {
-
+     console.log(this.props.features)
         return (
             <div className="container">
                 <div className="FeatureList_heading">
@@ -40,15 +40,17 @@ class Features extends Component {
                 </div>
             
                 <div className="feature__item">
-
+                    {/* <FeatureList features={this.props.features}/> */}
                     {Object.keys(this.props.features).map((feature, idx,itemHash) => (
                         <FeatureList
+                            features= {this.props.features}
                             key= {idx}
                             feature = {feature} 
                             featureHash = {feature + '-' + idx}
                             options = {this.props.features[feature].map((item) => (
                                 item))}
                             selected= {this.props.selected}
+                            
                         />
                         
                     ))}

@@ -214,17 +214,3 @@ class App extends Component {
 }
 
 export default App
-// {Object.keys(this.props.features).map((feature, idx,itemHash) => (
-//   <Features
-//     // updateFeature= {this.updateFeature}
-//     key= {idx}
-//     selected = {this.state.selected}
-//     feature = {feature} 
-//     featureHash = {feature + '-' + idx}
-//     options = {this.props.features[feature].map((item,name) => (
-//       item
-//       ))}
-//     // updateFeature= {this.updateFeature(this.state.options.feature,this.state.options.item)}
-//   />
-// ))}
-      
