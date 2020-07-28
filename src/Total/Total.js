@@ -5,14 +5,11 @@ import TotalCost from "../TotalCost/TotalCost";
 
 class Total extends Component {
   render() {
-
-    
-    // const summary = Object.keys(this.state.selected).map((feature, idx) => {
-    //     const featureHash = feature + '-' + idx;
-    //     const selectedOption = this.state.selected[feature];
-  
-    
-    // });
+    let total = Object.keys(this.props.selected).reduce(
+      (acc, curr) => acc + this.props.selected[curr].cost,
+      0
+    );
+    console.log(this.total)
     return (
       <div className="container">
         {/* <div className="summary__option" >
@@ -24,7 +21,9 @@ class Total extends Component {
             </div> */}
         <h2>Your cart</h2>
         <TotalList />
-        <TotalCost />
+        <TotalCost 
+          total = {total}
+        />
       </div>
     );
   }

@@ -1,18 +1,18 @@
-// import React, { Component } from 'react';
+// // import React, { Component } from 'react';
 
-// // Normalizes string as a slug - a string that is safe to use
-// // // in both URLs and html attributes
-// import slugify from 'slugify';
+// // // Normalizes string as a slug - a string that is safe to use
+// // // // in both URLs and html attributes
+// // import slugify from 'slugify';
 
-// import './App.css';
+// // import './App.css';
 
 
-// // This object will allow us to
-// // easily convert numbers into US dollar values
-// const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-//   style: 'currency',
-//   currency: 'USD'
-// });
+// // // This object will allow us to
+// // // easily convert numbers into US dollar values
+// // const USCurrencyFormat = new Intl.NumberFormat('en-US', {
+// //   style: 'currency',
+// //   currency: 'USD'
+// // });
 
 // class App extends Component {
 //   state = {
@@ -44,42 +44,43 @@
 //     });
 //   };
 
-  // render() {
-//   const features = Object.keys(this.props.features).map((feature, idx) => {
+//   render() {
+//     const features = Object.keys(this.props.features).map((feature, idx) => {
 
-  //     const featureHash = feature + '-' + idx;
-  //     const options = this.props.features[feature].map(item => {
-        
-  //       const itemHash = slugify(JSON.stringify(item));
-  //       return (
-
-
-  //         <div key={itemHash} className="feature__item">
-  //           <input
-  //             type="radio"
-  //             id={itemHash}
-  //             className="feature__option"
-  //             name={slugify(feature)}
-  //             checked={item.name === this.state.selected[feature].name}
-  //             onChange={e => this.updateFeature(feature, item)}
-  //           />
-  //           <label htmlFor={itemHash} className="feature__label">
-  //             {item.name} ({USCurrencyFormat.format(item.cost)})
-  //           </label>
-  //         </div>
+//         const featureHash = feature + '-' + idx;
+//         const options = this.props.features[feature].map(item => {
+          
+//           const itemHash = slugify(JSON.stringify(item));
+//           return (
 
 
-  //       );
-  //     });
+//             <div key={itemHash} className="feature__item">
+//               <input
+//                 type="radio"
+//                 id={itemHash}
+//                 className="feature__option"
+//                 name={slugify(feature)}
+//                 checked={item.name === this.state.selected[feature].name}
+//                 onChange={e => this.updateFeature(feature, item)}
+//               />
+//               <label htmlFor={itemHash} className="feature__label">
+//                 {item.name} ({USCurrencyFormat.format(item.cost)})
+//               </label>
+//             </div>
 
-  //     return (
-  //       <fieldset className="feature" key={featureHash}>
-  //         <legend className="feature__name">
-  //           <h3>{feature}</h3>
-  //         </legend>
-  //         {options}
-  //       </fieldset>
-  //     );
+
+//           );
+//         }
+//       );
+
+//       return (
+//         <fieldset className="feature" key={featureHash}>
+//           <legend className="feature__name">
+//             <h3>{feature}</h3>
+//           </legend>
+//           {options}
+//         </fieldset>
+//       );
 
 //     });
 
@@ -132,23 +133,21 @@
 //   }
 // }
 
-//export default App;
+// //export default App;
 
 import React, { Component } from 'react';
 import './App.css';
 import Features from '../Features/Features';
 import Total from '../Total/Total'
 
-// const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-//   style: 'currency',
-//   currency: 'USD'
-// });
-
+// // const USCurrencyFormat = new Intl.NumberFormat('en-US', {
+// //   style: 'currency',
+// //   currency: 'USD'
+// // });
+                      
 class App extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
+  state = {
       selected: {
         Processor: {
           name: '17th Generation Intel Core HB (7 Core with donut spare)',
@@ -169,7 +168,10 @@ class App extends Component {
       }
       
     };
-  }
+  // total = Object.keys(this.state.selected).reduce(
+  //   (acc, curr) => acc + this.state.selected[curr].cost,
+  //   0
+  // );
   updateFeature = (feature, newValue) => {
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
@@ -198,7 +200,11 @@ class App extends Component {
             />
           </form>
           <div className="summary__total">
-            <Total/>
+            <Total
+              selected = {this.state.selected}
+              features = {this.props.features}
+              total = {this.total}
+            />
           </div>
         
         </main>
