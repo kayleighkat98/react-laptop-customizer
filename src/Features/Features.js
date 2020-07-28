@@ -10,7 +10,7 @@ class Features extends Component {
 
 
         return (
-            <div className="container">
+            <>
                 <div className="FeatureList_heading">
                     <h1>Customize your laptop</h1>
                 </div>
@@ -31,7 +31,7 @@ class Features extends Component {
                     ))}
                 </div>
                 
-            </div>
+            </>
         );
         
     }

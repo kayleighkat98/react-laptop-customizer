@@ -12,6 +12,7 @@ class FeatureList extends Component {
         <legend className="feature__name">
           <h3>{this.props.feature}</h3>
         </legend>
+        
         {this.props.features[this.props.feature].map((item,idz) => (
            <FeatureItem
             idz = {idz+'b'}

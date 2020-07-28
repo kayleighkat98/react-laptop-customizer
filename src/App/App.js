@@ -87,20 +87,20 @@
 
 
 
-//     const summary = Object.keys(this.state.selected).map((feature, idx) => {
-//       const featureHash = feature + '-' + idx;
-//       const selectedOption = this.state.selected[feature];
+    // const summary = Object.keys(this.state.selected).map((feature, idx) => {
+    //   const featureHash = feature + '-' + idx;
+    //   const selectedOption = this.state.selected[feature];
 
-//       return (
-//         <div className="summary__option" key={featureHash}>
-//           <div className="summary__option__label">{feature} </div>
-//           <div className="summary__option__value">{selectedOption.name}</div>
-//           <div className="summary__option__cost">
-//             {USCurrencyFormat.format(selectedOption.cost)}
-//           </div>
-//         </div>
-//       );
-//     });
+    //   return (
+    //     <div className="summary__option" key={featureHash}>
+    //       <div className="summary__option__label">{feature} </div>
+    //       <div className="summary__option__value">{selectedOption.name}</div>
+    //       <div className="summary__option__cost">
+    //         {USCurrencyFormat.format(selectedOption.cost)}
+    //       </div>
+    //     </div>
+    //   );
+    // });
 
 //     const total = Object.keys(this.state.selected).reduce(
 //       (acc, curr) => acc + this.state.selected[curr].cost,
@@ -117,16 +117,16 @@
 //             <h2>Customize your laptop</h2>
 //             {features}
 //           </form>
-//           <section className="main__summary">                {/* CartList */}
-//             <h2>Your cart</h2>                               {/*title */}
-//             {summary}                                        {/* SelectedList */}
-//             <div className="summary__total">
-//               <div className="summary__total__label">Total</div>
-//               <div className="summary__total__value">
-//                 {USCurrencyFormat.format(total)}
-//               </div>
-//             </div>
-//           </section>
+          // <section className="main__summary">                {/* CartList */}
+          //   <h2>Your cart</h2>                               {/*title */}
+          //   {summary}                                        {/* SelectedList */}
+          //   <div className="summary__total">
+          //     <div className="summary__total__label">Total</div>
+          //     <div className="summary__total__value">
+          //       {USCurrencyFormat.format(total)}
+          //     </div>
+          //   </div>
+          // </section>
 //         </main>
 //       </div>
 //     );
@@ -140,10 +140,6 @@ import './App.css';
 import Features from '../Features/Features';
 import Total from '../Total/Total'
 
-// // const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-// //   style: 'currency',
-// //   currency: 'USD'
-// // });
                       
 class App extends Component {
 
@@ -168,10 +164,7 @@ class App extends Component {
       }
       
     };
-  // total = Object.keys(this.state.selected).reduce(
-  //   (acc, curr) => acc + this.state.selected[curr].cost,
-  //   0
-  // );
+
   updateFeature = (feature, newValue) => {
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
@@ -180,10 +173,7 @@ class App extends Component {
     });
   };
   render() {
-    // const USCurrencyFormat = new Intl.NumberFormat("en-US", {
-    //   style: "currency",
-    //   currency: "USD",
-    // });
+
     return(
       <div className="App">
 
@@ -199,13 +189,12 @@ class App extends Component {
               updateFeature= {this.updateFeature}
             />
           </form>
-          <div className="summary__total">
+          <section className="main__summary"> 
             <Total
               selected = {this.state.selected}
               features = {this.props.features}
-              total = {this.total}
             />
-          </div>
+          </section>
         
         </main>
 

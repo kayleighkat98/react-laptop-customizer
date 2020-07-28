@@ -16,9 +16,6 @@ class FeatureItem extends Component {
     render() {
 
 
-        console.log(this.props.selected);
-
-
         return(
             
                 <div className="feature__item">
