@@ -1,8 +1,8 @@
 // import React, { Component } from 'react';
 
 // // Normalizes string as a slug - a string that is safe to use
-// // in both URLs and html attributes
-import slugify from 'slugify';
+// // // in both URLs and html attributes
+// import slugify from 'slugify';
 
 // import './App.css';
 
@@ -54,34 +54,37 @@ import slugify from 'slugify';
   //       return (
 
 
-          // <div key={itemHash} className="feature__item">
-          //   <input
-          //     type="radio"
-          //     id={itemHash}
-          //     className="feature__option"
-          //     name={slugify(feature)}
-          //     checked={item.name === this.state.selected[feature].name}
-          //     onChange={e => this.updateFeature(feature, item)}
-          //   />
-            // <label htmlFor={itemHash} className="feature__label">
-            //   {item.name} ({USCurrencyFormat.format(item.cost)})
-            // </label>
-          // </div>
+  //         <div key={itemHash} className="feature__item">
+  //           <input
+  //             type="radio"
+  //             id={itemHash}
+  //             className="feature__option"
+  //             name={slugify(feature)}
+  //             checked={item.name === this.state.selected[feature].name}
+  //             onChange={e => this.updateFeature(feature, item)}
+  //           />
+  //           <label htmlFor={itemHash} className="feature__label">
+  //             {item.name} ({USCurrencyFormat.format(item.cost)})
+  //           </label>
+  //         </div>
 
 
   //       );
   //     });
 
-//       return (
-        // <fieldset className="feature" key={featureHash}>
-        //   <legend className="feature__name">
-        //     <h3>{feature}</h3>
-        //   </legend>
-        //   {options}
-        // </fieldset>
-//       );
+  //     return (
+  //       <fieldset className="feature" key={featureHash}>
+  //         <legend className="feature__name">
+  //           <h3>{feature}</h3>
+  //         </legend>
+  //         {options}
+  //       </fieldset>
+  //     );
 
 //     });
+
+
+
 
 //     const summary = Object.keys(this.state.selected).map((feature, idx) => {
 //       const featureHash = feature + '-' + idx;
@@ -167,14 +170,15 @@ class App extends Component {
       
     };
   }
-  updateFeature = (feature, newValue) => {
-    const selected = Object.assign({}, this.state.selected);
-    selected[feature] = newValue;
-    this.setState({
-      selected
-    });
-  };
+  // updateFeature = (feature, newValue) => {
+  //   const selected = Object.assign({}, this.state.selected);
+  //   selected[feature] = newValue;
+  //   this.setState({
+  //     selected
+  //   });
+  // };
   render() {
+
     // const USCurrencyFormat = new Intl.NumberFormat("en-US", {
     //   style: "currency",
     //   currency: "USD",
@@ -188,23 +192,13 @@ class App extends Component {
 
         <main>
           <form className="main__form">
-            <div className="FeatureList_heading">
-                <h1>Customize your laptop</h1>
-            </div>
-            {Object.keys(this.props.features).map((feature, idx,itemHash) => (
               <Features
                 // updateFeature= {this.updateFeature}
                 selected = {this.state.selected}
-                feature = {feature} 
-                key = {idx}
-                features={this.props.features}
-                featureHash = {feature + '-' + idx}
-                options = {this.props.features[feature].map(item => 
-                  itemHash = slugify(JSON.stringify(item)))}
-                    name={slugify(feature)}
-                updateFeature= {this.updateFeature(this.state.options.feature,this.state.options.item)}
+                features = {this.props.features}
+                // updateFeature= {this.updateFeature(this.state.options.feature,this.state.options.item)}
               />
-            ))}
+            
                        
             
           </form>
@@ -220,3 +214,17 @@ class App extends Component {
 }
 
 export default App
+// {Object.keys(this.props.features).map((feature, idx,itemHash) => (
+//   <Features
+//     // updateFeature= {this.updateFeature}
+//     key= {idx}
+//     selected = {this.state.selected}
+//     feature = {feature} 
+//     featureHash = {feature + '-' + idx}
+//     options = {this.props.features[feature].map((item,name) => (
+//       item
+//       ))}
+//     // updateFeature= {this.updateFeature(this.state.options.feature,this.state.options.item)}
+//   />
+// ))}
+      
