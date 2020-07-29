@@ -7,14 +7,16 @@ class Total extends Component {
   render() {
 
     return (
-      <>
+
+      <section className="main__summary"> 
         <h2>Your cart</h2>
         <TotalList 
           selected = {this.props.selected}
           features = {this.props.features}
         />
+      </section>
 
-      </>
+
     );
   }
 }

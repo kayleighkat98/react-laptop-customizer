@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-//import './Features.css';
+
 import FeatureList from "../FeatureList/FeatureList";
-//import slugify from "slugify";
+
 
 
 class Features extends Component {
@@ -10,13 +10,13 @@ class Features extends Component {
 
 
         return (
-            <>
+            <>  <form className="main__form">
                 <div className="FeatureList_heading">
                     <h1>Customize your laptop</h1>
                 </div>
             
                 <div className="feature__item">
-
+   
                     
                     {Object.keys(this.props.features).map((feature, idx) => (
                         <FeatureList
@@ -29,9 +29,10 @@ class Features extends Component {
 
                         />
                     ))}
+                
                 </div>
                 
-            </>
+            </form>     </>    
         );
         
     }

@@ -28,9 +28,6 @@ class FeatureList extends Component {
             
       </fieldset>
     );
-    // itemName = item)(
-    //   itemHash = slugify(JSON.stringify(itemName))
-  
   }
 }
 
