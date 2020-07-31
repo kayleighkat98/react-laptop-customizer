@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-laptop-customizer/static/css/main.7806e47b.chunk.css",
+    "main.js": "/react-laptop-customizer/static/js/main.6a9f16c7.chunk.js",
+    "main.js.map": "/react-laptop-customizer/static/js/main.6a9f16c7.chunk.js.map",
+    "runtime-main.js": "/react-laptop-customizer/static/js/runtime-main.6548c473.js",
+    "runtime-main.js.map": "/react-laptop-customizer/static/js/runtime-main.6548c473.js.map",
+    "static/js/2.8bd02bd4.chunk.js": "/react-laptop-customizer/static/js/2.8bd02bd4.chunk.js",
+    "static/js/2.8bd02bd4.chunk.js.map": "/react-laptop-customizer/static/js/2.8bd02bd4.chunk.js.map",
+    "index.html": "/react-laptop-customizer/index.html",
+    "precache-manifest.4022fa8bc533d38352f6eda28a3941e1.js": "/react-laptop-customizer/precache-manifest.4022fa8bc533d38352f6eda28a3941e1.js",
+    "service-worker.js": "/react-laptop-customizer/service-worker.js",
+    "static/css/main.7806e47b.chunk.css.map": "/react-laptop-customizer/static/css/main.7806e47b.chunk.css.map",
+    "static/js/2.8bd02bd4.chunk.js.LICENSE.txt": "/react-laptop-customizer/static/js/2.8bd02bd4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6548c473.js",
+    "static/js/2.8bd02bd4.chunk.js",
+    "static/css/main.7806e47b.chunk.css",
+    "static/js/main.6a9f16c7.chunk.js"
+  ]
+}
